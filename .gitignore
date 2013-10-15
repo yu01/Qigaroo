@@ -2,3 +2,9 @@
 !*xcodeproj/project.pbxproj
 !*.xcworkspace/contents.xcworkspacedata
 .DS_Store
+
+# pods
+Qigaroo/Build/*
+Qigaroo/Pods/*
+Qigaroo/Qigaroo.xcodeproj/xcuserdata/*.xcuserdatad/*
+Qigaroo/Qigaroo.xcworkspace/xcuserdata/*.xcuserdatad/*
