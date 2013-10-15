@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893A22D0180D1DFA001B889D /* IKInputTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */; };
+		893A22D3180D1E24001B889D /* IKInputTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22D2180D1E24001B889D /* IKInputTextViewController.m */; };
 		89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371D180D0E4400AF297C /* UIKit.framework */; };
 		89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371F180D0E4400AF297C /* Foundation.framework */; };
 		89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F73721180D0E4400AF297C /* CoreGraphics.framework */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKInputTextViewCell.h; sourceTree = "<group>"; };
+		893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKInputTextViewCell.m; sourceTree = "<group>"; };
+		893A22D1180D1E24001B889D /* IKInputTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKInputTextViewController.h; sourceTree = "<group>"; };
+		893A22D2180D1E24001B889D /* IKInputTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKInputTextViewController.m; sourceTree = "<group>"; };
 		89F7371A180D0E4400AF297C /* Qigaroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qigaroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F7371D180D0E4400AF297C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89F7371F180D0E4400AF297C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +95,10 @@
 				89F73738180D0E4500AF297C /* IKViewController.h */,
 				89F73739180D0E4500AF297C /* IKViewController.m */,
 				89F73724180D0E4500AF297C /* Supporting Files */,
+				893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */,
+				893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */,
+				893A22D1180D1E24001B889D /* IKInputTextViewController.h */,
+				893A22D2180D1E24001B889D /* IKInputTextViewController.m */,
 			);
 			path = Qigaroo;
 			sourceTree = "<group>";
@@ -177,6 +187,8 @@
 				89F7372A180D0E4500AF297C /* main.m in Sources */,
 				89F7372E180D0E4500AF297C /* IKAppDelegate.m in Sources */,
 				89F7373A180D0E4500AF297C /* IKViewController.m in Sources */,
+				893A22D0180D1DFA001B889D /* IKInputTextViewCell.m in Sources */,
+				893A22D3180D1E24001B889D /* IKInputTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +311,7 @@
 				89F7373F180D0E4500AF297C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
