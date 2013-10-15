@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371D180D0E4400AF297C /* UIKit.framework */; };
+		89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371F180D0E4400AF297C /* Foundation.framework */; };
+		89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F73721180D0E4400AF297C /* CoreGraphics.framework */; };
+		89F73728180D0E4500AF297C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89F73726180D0E4500AF297C /* InfoPlist.strings */; };
+		89F7372A180D0E4500AF297C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F73729180D0E4500AF297C /* main.m */; };
+		89F7372E180D0E4500AF297C /* IKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F7372D180D0E4500AF297C /* IKAppDelegate.m */; };
+		89F73730180D0E4500AF297C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F7372F180D0E4500AF297C /* Default.png */; };
+		89F73732180D0E4500AF297C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F73731180D0E4500AF297C /* Default@2x.png */; };
+		89F73734180D0E4500AF297C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F73733180D0E4500AF297C /* Default-568h@2x.png */; };
+		89F73737180D0E4500AF297C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F73735180D0E4500AF297C /* MainStoryboard.storyboard */; };
+		89F7373A180D0E4500AF297C /* IKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F73739180D0E4500AF297C /* IKViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89F7371A180D0E4400AF297C /* Qigaroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qigaroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89F7371D180D0E4400AF297C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		89F7371F180D0E4400AF297C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		89F73721180D0E4400AF297C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		89F73725180D0E4500AF297C /* Qigaroo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Qigaroo-Info.plist"; sourceTree = "<group>"; };
+		89F73727180D0E4500AF297C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89F73729180D0E4500AF297C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89F7372B180D0E4500AF297C /* Qigaroo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qigaroo-Prefix.pch"; sourceTree = "<group>"; };
+		89F7372C180D0E4500AF297C /* IKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKAppDelegate.h; sourceTree = "<group>"; };
+		89F7372D180D0E4500AF297C /* IKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKAppDelegate.m; sourceTree = "<group>"; };
+		89F7372F180D0E4500AF297C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		89F73731180D0E4500AF297C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		89F73733180D0E4500AF297C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		89F73736180D0E4500AF297C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		89F73738180D0E4500AF297C /* IKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKViewController.h; sourceTree = "<group>"; };
+		89F73739180D0E4500AF297C /* IKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89F73717180D0E4400AF297C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */,
+				89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */,
+				89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89F73711180D0E4400AF297C = {
+			isa = PBXGroup;
+			children = (
+				89F73723180D0E4400AF297C /* Qigaroo */,
+				89F7371C180D0E4400AF297C /* Frameworks */,
+				89F7371B180D0E4400AF297C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89F7371B180D0E4400AF297C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89F7371A180D0E4400AF297C /* Qigaroo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89F7371C180D0E4400AF297C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89F7371D180D0E4400AF297C /* UIKit.framework */,
+				89F7371F180D0E4400AF297C /* Foundation.framework */,
+				89F73721180D0E4400AF297C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89F73723180D0E4400AF297C /* Qigaroo */ = {
+			isa = PBXGroup;
+			children = (
+				89F7372C180D0E4500AF297C /* IKAppDelegate.h */,
+				89F7372D180D0E4500AF297C /* IKAppDelegate.m */,
+				89F73735180D0E4500AF297C /* MainStoryboard.storyboard */,
+				89F73738180D0E4500AF297C /* IKViewController.h */,
+				89F73739180D0E4500AF297C /* IKViewController.m */,
+				89F73724180D0E4500AF297C /* Supporting Files */,
+			);
+			path = Qigaroo;
+			sourceTree = "<group>";
+		};
+		89F73724180D0E4500AF297C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89F73725180D0E4500AF297C /* Qigaroo-Info.plist */,
+				89F73726180D0E4500AF297C /* InfoPlist.strings */,
+				89F73729180D0E4500AF297C /* main.m */,
+				89F7372B180D0E4500AF297C /* Qigaroo-Prefix.pch */,
+				89F7372F180D0E4500AF297C /* Default.png */,
+				89F73731180D0E4500AF297C /* Default@2x.png */,
+				89F73733180D0E4500AF297C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89F73719180D0E4400AF297C /* Qigaroo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89F7373D180D0E4500AF297C /* Build configuration list for PBXNativeTarget "Qigaroo" */;
+			buildPhases = (
+				89F73716180D0E4400AF297C /* Sources */,
+				89F73717180D0E4400AF297C /* Frameworks */,
+				89F73718180D0E4400AF297C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Qigaroo;
+			productName = Qigaroo;
+			productReference = 89F7371A180D0E4400AF297C /* Qigaroo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89F73712180D0E4400AF297C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "IPLAB-Kanno";
+			};
+			buildConfigurationList = 89F73715180D0E4400AF297C /* Build configuration list for PBXProject "Qigaroo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 89F73711180D0E4400AF297C;
+			productRefGroup = 89F7371B180D0E4400AF297C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89F73719180D0E4400AF297C /* Qigaroo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89F73718180D0E4400AF297C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89F73728180D0E4500AF297C /* InfoPlist.strings in Resources */,
+				89F73730180D0E4500AF297C /* Default.png in Resources */,
+				89F73732180D0E4500AF297C /* Default@2x.png in Resources */,
+				89F73734180D0E4500AF297C /* Default-568h@2x.png in Resources */,
+				89F73737180D0E4500AF297C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89F73716180D0E4400AF297C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89F7372A180D0E4500AF297C /* main.m in Sources */,
+				89F7372E180D0E4500AF297C /* IKAppDelegate.m in Sources */,
+				89F7373A180D0E4500AF297C /* IKViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89F73726180D0E4500AF297C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89F73727180D0E4500AF297C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		89F73735180D0E4500AF297C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89F73736180D0E4500AF297C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89F7373B180D0E4500AF297C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		89F7373C180D0E4500AF297C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89F7373E180D0E4500AF297C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qigaroo/Qigaroo-Prefix.pch";
+				INFOPLIST_FILE = "Qigaroo/Qigaroo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		89F7373F180D0E4500AF297C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Qigaroo/Qigaroo-Prefix.pch";
+				INFOPLIST_FILE = "Qigaroo/Qigaroo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89F73715180D0E4400AF297C /* Build configuration list for PBXProject "Qigaroo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F7373B180D0E4500AF297C /* Debug */,
+				89F7373C180D0E4500AF297C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89F7373D180D0E4500AF297C /* Build configuration list for PBXNativeTarget "Qigaroo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F7373E180D0E4500AF297C /* Debug */,
+				89F7373F180D0E4500AF297C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89F73712180D0E4400AF297C /* Project object */;
+}
