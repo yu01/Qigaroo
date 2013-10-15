@@ -76,30 +76,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKo-lb-FIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="22"/>
+            <point key="canvasLocation" x="704" y="-10"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="IKInputTextViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKInputTextViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="IKInputTextViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKInputTextViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushAddBtn:"/>
-            </relationships>
-        </class>
-        <class className="IKViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

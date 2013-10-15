@@ -7,6 +7,7 @@
 //
 
 #import "IKInputTextViewController.h"
+#import "IKServerAdaptor.h"
 
 @interface IKInputTextViewController ()
 
@@ -130,11 +131,14 @@
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField*)textField{
     // TODO: Viewを上にずらす
-    NSLog(@"y:%f",textField.bounds.origin.y);
-    if (textField.frame.origin.y > 30) {
+    int y = [[textField superview] superview].frame.origin.y;
+    NSLog(@"y:%d",y);
+    NSLog(@"self.view:%@",self.tableView);
+    if (y > 150) {
         [UIView animateWithDuration:0.3
                          animations:^{
-                             self.view.frame = CGRectMake(0, -textField.frame.origin.y, self.view.frame.origin.x, self.view.frame.origin.y);
+                             int height = 80;
+                             self.tableView.frame = CGRectMake(0, -height, self.tableView.frame.size.width, self.tableView.frame.size.height);
                          }];
     }
     
@@ -144,6 +148,11 @@
     [textField resignFirstResponder];
     
     // TODO: Viewがずれているなら戻す
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         self.tableView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height);
+                     }];
+    
     return YES;
 }
 
@@ -152,6 +161,9 @@
     self->inputStr = [textField.text mutableCopy];
     [self->inputStr replaceCharactersInRange:range withString:string];
     NSLog(@"入力：%@",self->inputStr);
+    [[IKServerAdaptor sharedManager] getCategories:self->inputStr success:^(NSArray *words){
+        NSLog(@"候補: %@",words);
+    }];
     return YES;
 }
 

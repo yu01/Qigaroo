@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ED8FA560CB9480484493770 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E89BA1C15449A59A5E5398 /* libPods.a */; };
 		893A22D0180D1DFA001B889D /* IKInputTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */; };
 		893A22D3180D1E24001B889D /* IKInputTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22D2180D1E24001B889D /* IKInputTextViewController.m */; };
+		893A22ED180DA4BC001B889D /* IKHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22EC180DA4BC001B889D /* IKHTTPClient.m */; };
+		893A22F0180DA590001B889D /* IKServerAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22EF180DA590001B889D /* IKServerAdaptor.m */; };
 		89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371D180D0E4400AF297C /* UIKit.framework */; };
 		89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371F180D0E4400AF297C /* Foundation.framework */; };
 		89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F73721180D0E4400AF297C /* CoreGraphics.framework */; };
@@ -23,10 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1308791B5E46C7AF1E9D5D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		43E89BA1C15449A59A5E5398 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKInputTextViewCell.h; sourceTree = "<group>"; };
 		893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKInputTextViewCell.m; sourceTree = "<group>"; };
 		893A22D1180D1E24001B889D /* IKInputTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKInputTextViewController.h; sourceTree = "<group>"; };
 		893A22D2180D1E24001B889D /* IKInputTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKInputTextViewController.m; sourceTree = "<group>"; };
+		893A22EB180DA4BC001B889D /* IKHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKHTTPClient.h; sourceTree = "<group>"; };
+		893A22EC180DA4BC001B889D /* IKHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKHTTPClient.m; sourceTree = "<group>"; };
+		893A22EE180DA58F001B889D /* IKServerAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKServerAdaptor.h; sourceTree = "<group>"; };
+		893A22EF180DA590001B889D /* IKServerAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKServerAdaptor.m; sourceTree = "<group>"; };
 		89F7371A180D0E4400AF297C /* Qigaroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qigaroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F7371D180D0E4400AF297C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89F7371F180D0E4400AF297C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +62,7 @@
 				89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */,
 				89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */,
 				89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */,
+				1ED8FA560CB9480484493770 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +75,7 @@
 				89F73723180D0E4400AF297C /* Qigaroo */,
 				89F7371C180D0E4400AF297C /* Frameworks */,
 				89F7371B180D0E4400AF297C /* Products */,
+				0C1308791B5E46C7AF1E9D5D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +93,7 @@
 				89F7371D180D0E4400AF297C /* UIKit.framework */,
 				89F7371F180D0E4400AF297C /* Foundation.framework */,
 				89F73721180D0E4400AF297C /* CoreGraphics.framework */,
+				43E89BA1C15449A59A5E5398 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,11 +106,15 @@
 				89F73735180D0E4500AF297C /* MainStoryboard.storyboard */,
 				89F73738180D0E4500AF297C /* IKViewController.h */,
 				89F73739180D0E4500AF297C /* IKViewController.m */,
-				89F73724180D0E4500AF297C /* Supporting Files */,
 				893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */,
 				893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */,
 				893A22D1180D1E24001B889D /* IKInputTextViewController.h */,
 				893A22D2180D1E24001B889D /* IKInputTextViewController.m */,
+				89F73724180D0E4500AF297C /* Supporting Files */,
+				893A22EB180DA4BC001B889D /* IKHTTPClient.h */,
+				893A22EC180DA4BC001B889D /* IKHTTPClient.m */,
+				893A22EE180DA58F001B889D /* IKServerAdaptor.h */,
+				893A22EF180DA590001B889D /* IKServerAdaptor.m */,
 			);
 			path = Qigaroo;
 			sourceTree = "<group>";
@@ -124,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89F7373D180D0E4500AF297C /* Build configuration list for PBXNativeTarget "Qigaroo" */;
 			buildPhases = (
+				C4D79B6142BA44569702387D /* Check Pods Manifest.lock */,
 				89F73716180D0E4400AF297C /* Sources */,
 				89F73717180D0E4400AF297C /* Frameworks */,
 				89F73718180D0E4400AF297C /* Resources */,
+				0ACB04387B0B4924A43E20F5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +197,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ACB04387B0B4924A43E20F5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4D79B6142BA44569702387D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		89F73716180D0E4400AF297C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -189,6 +240,8 @@
 				89F7373A180D0E4500AF297C /* IKViewController.m in Sources */,
 				893A22D0180D1DFA001B889D /* IKInputTextViewCell.m in Sources */,
 				893A22D3180D1E24001B889D /* IKInputTextViewController.m in Sources */,
+				893A22ED180DA4BC001B889D /* IKHTTPClient.m in Sources */,
+				893A22F0180DA590001B889D /* IKServerAdaptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +325,7 @@
 		};
 		89F7373E180D0E4500AF297C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1308791B5E46C7AF1E9D5D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qigaroo/Qigaroo-Prefix.pch";
@@ -283,6 +337,7 @@
 		};
 		89F7373F180D0E4500AF297C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1308791B5E46C7AF1E9D5D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qigaroo/Qigaroo-Prefix.pch";
