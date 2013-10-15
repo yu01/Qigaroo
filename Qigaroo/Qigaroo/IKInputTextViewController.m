@@ -26,12 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self->cellCount = [[NSMutableArray alloc] initWithObjects:@"1", @"2",nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,66 +40,72 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self->cellCount count]+1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"InputCell";
+    IKInputTextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.inputTextField.delegate = self;
+    cell.inputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    //    [cell.inputTextField addTarget:self action:@selector(hoge:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    cell.inputTextField.hidden = NO;
+    cell.addBtn.hidden = YES;
     
-    // Configure the cell...
+    if (indexPath.row >= [self->cellCount count]) {
+        cell.inputTextField.hidden = YES;
+        cell.addBtn.hidden = NO;
+    }
     
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
@@ -118,6 +120,43 @@
      */
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
 - (IBAction)pushAddBtn:(id)sender {
+    [self->cellCount addObject:[NSString stringWithFormat:@"%d",[self->cellCount count]]];
+    [self.tableView reloadData];
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField*)textField{
+    // TODO: Viewを上にずらす
+    NSLog(@"y:%f",textField.bounds.origin.y);
+    if (textField.frame.origin.y > 30) {
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             self.view.frame = CGRectMake(0, -textField.frame.origin.y, self.view.frame.origin.x, self.view.frame.origin.y);
+                         }];
+    }
+    
+    return YES;
+}
+-(BOOL)textFieldShouldReturn:(UITextField*)textField{
+    [textField resignFirstResponder];
+    
+    // TODO: Viewがずれているなら戻す
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    self->inputStr = [textField.text mutableCopy];
+    [self->inputStr replaceCharactersInRange:range withString:string];
+    NSLog(@"入力：%@",self->inputStr);
+    return YES;
+}
+
+-(BOOL)textFieldShouldClear:(UITextField*)textField{
+    [self->inputStr setString:@""];
+    return YES;
 }
 @end
