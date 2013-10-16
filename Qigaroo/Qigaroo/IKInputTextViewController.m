@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.allowsSelection = NO;
     
     self->cellCount = [[NSMutableArray alloc] initWithObjects:@"1", @"2",nil];
 }
@@ -134,13 +135,13 @@
     int y = [[textField superview] superview].frame.origin.y;
     NSLog(@"y:%d",y);
     NSLog(@"self.view:%@",self.tableView);
-    if (y > 150) {
-        [UIView animateWithDuration:0.3
-                         animations:^{
-                             int height = 80;
-                             self.tableView.frame = CGRectMake(0, -height, self.tableView.frame.size.width, self.tableView.frame.size.height);
-                         }];
-    }
+//    if (y > 150) {
+//        [UIView animateWithDuration:0.3
+//                         animations:^{
+//                             int height = 80;
+//                             self.tableView.frame = CGRectMake(0, -height, self.tableView.frame.size.width, self.tableView.frame.size.height);
+//                         }];
+//    }
     
     return YES;
 }
@@ -164,6 +165,7 @@
     [[IKServerAdaptor sharedManager] getCategories:self->inputStr success:^(NSArray *words){
         NSLog(@"候補: %@",words);
     }];
+    
     return YES;
 }
 

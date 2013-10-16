@@ -69,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		893A22F4180ED0DF001B889D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				893A22EB180DA4BC001B889D /* IKHTTPClient.h */,
+				893A22EC180DA4BC001B889D /* IKHTTPClient.m */,
+				893A22EE180DA58F001B889D /* IKServerAdaptor.h */,
+				893A22EF180DA590001B889D /* IKServerAdaptor.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		89F73711180D0E4400AF297C = {
 			isa = PBXGroup;
 			children = (
@@ -111,10 +122,7 @@
 				893A22D1180D1E24001B889D /* IKInputTextViewController.h */,
 				893A22D2180D1E24001B889D /* IKInputTextViewController.m */,
 				89F73724180D0E4500AF297C /* Supporting Files */,
-				893A22EB180DA4BC001B889D /* IKHTTPClient.h */,
-				893A22EC180DA4BC001B889D /* IKHTTPClient.m */,
-				893A22EE180DA58F001B889D /* IKServerAdaptor.h */,
-				893A22EF180DA590001B889D /* IKServerAdaptor.m */,
+				893A22F4180ED0DF001B889D /* Network */,
 			);
 			path = Qigaroo;
 			sourceTree = "<group>";
