@@ -355,10 +355,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C1308791B5E46C7AF1E9D5D /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qigaroo/Qigaroo-Prefix.pch";
 				INFOPLIST_FILE = "Qigaroo/Qigaroo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F8B3DFF3-A1DD-4625-AE8B-E19F31CABF1F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F8B3DFF3-A1DD-4625-AE8B-E19F31CABF1F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -367,10 +371,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C1308791B5E46C7AF1E9D5D /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Qigaroo/Qigaroo-Prefix.pch";
 				INFOPLIST_FILE = "Qigaroo/Qigaroo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F8B3DFF3-A1DD-4625-AE8B-E19F31CABF1F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
