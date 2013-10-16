@@ -12,6 +12,8 @@
 		893A22D3180D1E24001B889D /* IKInputTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22D2180D1E24001B889D /* IKInputTextViewController.m */; };
 		893A22ED180DA4BC001B889D /* IKHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22EC180DA4BC001B889D /* IKHTTPClient.m */; };
 		893A22F0180DA590001B889D /* IKServerAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22EF180DA590001B889D /* IKServerAdaptor.m */; };
+		893A22FA180ED786001B889D /* WUTextSuggestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22F7180ED786001B889D /* WUTextSuggestionController.m */; };
+		893A22FB180ED786001B889D /* WUTextSuggestionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22F9180ED786001B889D /* WUTextSuggestionDisplayController.m */; };
 		89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371D180D0E4400AF297C /* UIKit.framework */; };
 		89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371F180D0E4400AF297C /* Foundation.framework */; };
 		89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F73721180D0E4400AF297C /* CoreGraphics.framework */; };
@@ -36,6 +38,10 @@
 		893A22EC180DA4BC001B889D /* IKHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKHTTPClient.m; sourceTree = "<group>"; };
 		893A22EE180DA58F001B889D /* IKServerAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKServerAdaptor.h; sourceTree = "<group>"; };
 		893A22EF180DA590001B889D /* IKServerAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKServerAdaptor.m; sourceTree = "<group>"; };
+		893A22F6180ED786001B889D /* WUTextSuggestionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUTextSuggestionController.h; sourceTree = "<group>"; };
+		893A22F7180ED786001B889D /* WUTextSuggestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUTextSuggestionController.m; sourceTree = "<group>"; };
+		893A22F8180ED786001B889D /* WUTextSuggestionDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUTextSuggestionDisplayController.h; sourceTree = "<group>"; };
+		893A22F9180ED786001B889D /* WUTextSuggestionDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUTextSuggestionDisplayController.m; sourceTree = "<group>"; };
 		89F7371A180D0E4400AF297C /* Qigaroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qigaroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F7371D180D0E4400AF297C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89F7371F180D0E4400AF297C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +86,17 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		893A22F5180ED786001B889D /* WUTextSuggestion */ = {
+			isa = PBXGroup;
+			children = (
+				893A22F6180ED786001B889D /* WUTextSuggestionController.h */,
+				893A22F7180ED786001B889D /* WUTextSuggestionController.m */,
+				893A22F8180ED786001B889D /* WUTextSuggestionDisplayController.h */,
+				893A22F9180ED786001B889D /* WUTextSuggestionDisplayController.m */,
+			);
+			path = WUTextSuggestion;
+			sourceTree = "<group>";
+		};
 		89F73711180D0E4400AF297C = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +129,7 @@
 		89F73723180D0E4400AF297C /* Qigaroo */ = {
 			isa = PBXGroup;
 			children = (
+				893A22F5180ED786001B889D /* WUTextSuggestion */,
 				89F7372C180D0E4500AF297C /* IKAppDelegate.h */,
 				89F7372D180D0E4500AF297C /* IKAppDelegate.m */,
 				89F73735180D0E4500AF297C /* MainStoryboard.storyboard */,
@@ -250,6 +268,8 @@
 				893A22D3180D1E24001B889D /* IKInputTextViewController.m in Sources */,
 				893A22ED180DA4BC001B889D /* IKHTTPClient.m in Sources */,
 				893A22F0180DA590001B889D /* IKServerAdaptor.m in Sources */,
+				893A22FA180ED786001B889D /* WUTextSuggestionController.m in Sources */,
+				893A22FB180ED786001B889D /* WUTextSuggestionDisplayController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

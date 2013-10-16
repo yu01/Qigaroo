@@ -53,18 +53,30 @@
                                                 <action selector="pushAddBtn:" destination="iQF-e7-Fkf" eventType="touchUpInside" id="XIc-LA-aoz"/>
                                             </connections>
                                         </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCG-9u-p0l">
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="188" id="6gY-db-uFz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="vYx-xS-WxY" firstAttribute="centerX" secondItem="Axh-2f-VDl" secondAttribute="centerX" type="default" id="1qT-6u-b9c"/>
+                                    <constraint firstItem="hCG-9u-p0l" firstAttribute="bottom" secondItem="0DP-wi-kz3" secondAttribute="bottom" type="default" id="8Ie-F7-mg4"/>
+                                    <constraint firstItem="hCG-9u-p0l" firstAttribute="top" secondItem="0DP-wi-kz3" secondAttribute="top" type="default" id="SCV-iZ-PED"/>
                                     <constraint firstAttribute="trailing" secondItem="0DP-wi-kz3" secondAttribute="trailing" constant="20" type="default" id="VyD-mx-DnB"/>
+                                    <constraint firstItem="hCG-9u-p0l" firstAttribute="leading" secondItem="0DP-wi-kz3" secondAttribute="leading" type="default" id="mQM-7G-OxG"/>
                                     <constraint firstItem="vYx-xS-WxY" firstAttribute="baseline" secondItem="0DP-wi-kz3" secondAttribute="baseline" type="default" id="qd7-hG-E3i"/>
                                     <constraint firstItem="0DP-wi-kz3" firstAttribute="centerY" secondItem="Axh-2f-VDl" secondAttribute="centerY" type="default" id="swO-di-eTH"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="addBtn" destination="vYx-xS-WxY" id="1pz-20-JwL"/>
                                     <outlet property="inputTextField" destination="0DP-wi-kz3" id="Isd-Ma-Gt7"/>
+                                    <outlet property="inputTextView" destination="hCG-9u-p0l" id="dtY-uG-KDD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,6 +97,7 @@
             <relationships>
                 <relationship kind="outlet" name="addBtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inputTextView" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="IKInputTextViewController" superclassName="UITableViewController">

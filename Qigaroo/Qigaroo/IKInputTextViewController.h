@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "IKInputTextViewCell.h"
 
-@interface IKInputTextViewController : UITableViewController <UITextFieldDelegate>{
-    NSMutableArray *cellCount;
+@interface IKInputTextViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate>{
+    NSMutableArray *cellCount, *suggestArr;
     NSMutableString *inputStr;
 }
 - (IBAction)pushAddBtn:(id)sender;
