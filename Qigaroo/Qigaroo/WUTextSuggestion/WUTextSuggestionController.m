@@ -109,7 +109,7 @@ NSString * const WUTextSuggestionControllerTextInputTextPropertyKey = @"text";
     
     
     if (word.length >= 1 && range.location != NSNotFound) {
-        NSString *rest = [word substringFromIndex:1];
+        NSString *rest = [word substringFromIndex:0];
             self.suggesting = YES;
             self.suggestionRange = NSMakeRange(range.location , range.length - 1);
             if (self.shouldReloadSuggestionsBlock) {

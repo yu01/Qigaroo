@@ -159,7 +159,6 @@
 {
     self->inputStr = [textView.text mutableCopy];
     [self->inputStr replaceCharactersInRange:range withString:text];
-//    [self->inputStr deleteCharactersInRange:NSMakeRange(0, 1)];
     NSLog(@"入力：%@",self->inputStr);
     [[IKServerAdaptor sharedManager] getCategories:self->inputStr success:^(NSArray *words){
         NSLog(@"候補: %@",words);

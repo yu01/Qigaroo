@@ -25,6 +25,29 @@
 		89F73734180D0E4500AF297C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F73733180D0E4500AF297C /* Default-568h@2x.png */; };
 		89F73737180D0E4500AF297C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F73735180D0E4500AF297C /* MainStoryboard.storyboard */; };
 		89F7373A180D0E4500AF297C /* IKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F73739180D0E4500AF297C /* IKViewController.m */; };
+		89FCD8AB181857F5006F86EE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8A9181857F5006F86EE /* background.png */; };
+		89FCD8AC181857F5006F86EE /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8AA181857F5006F86EE /* background@2x.png */; };
+		89FCD8B218185818006F86EE /* connect_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8AD18185817006F86EE /* connect_off.png */; };
+		89FCD8B318185818006F86EE /* connect_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8AE18185818006F86EE /* connect_off@2x.png */; };
+		89FCD8B418185818006F86EE /* connect_on-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8AF18185818006F86EE /* connect_on-tap.png */; };
+		89FCD8B518185818006F86EE /* connect_on-tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8B018185818006F86EE /* connect_on-tap@2x.png */; };
+		89FCD8B618185818006F86EE /* connect_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8B118185818006F86EE /* connect_on@2x.png */; };
+		89FCD8BB1818583A006F86EE /* basicinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8B71818583A006F86EE /* basicinfo.png */; };
+		89FCD8BC1818583A006F86EE /* basicinfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8B81818583A006F86EE /* basicinfo@2x.png */; };
+		89FCD8BD1818583A006F86EE /* basicinfotop.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8B91818583A006F86EE /* basicinfotop.png */; };
+		89FCD8BE1818583A006F86EE /* basicinfotop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8BA1818583A006F86EE /* basicinfotop@2x.png */; };
+		89FCD8C518185864006F86EE /* tabbase_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8BF18185864006F86EE /* tabbase_off.png */; };
+		89FCD8C618185864006F86EE /* tabbase_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8C018185864006F86EE /* tabbase_off@2x.png */; };
+		89FCD8C718185864006F86EE /* tabbase_on_his.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8C118185864006F86EE /* tabbase_on_his.png */; };
+		89FCD8C818185864006F86EE /* tabbase_on_his@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8C218185864006F86EE /* tabbase_on_his@2x.png */; };
+		89FCD8C918185864006F86EE /* tabbase_on_pro.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8C318185864006F86EE /* tabbase_on_pro.png */; };
+		89FCD8CA18185864006F86EE /* tabbase_on_pro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FCD8C418185864006F86EE /* tabbase_on_pro@2x.png */; };
+		89FCD8D018185BFB006F86EE /* IKAbstractTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8CF18185BFB006F86EE /* IKAbstractTabViewController.m */; };
+		89FCD8D718185C6E006F86EE /* IKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8D218185C6E006F86EE /* IKHomeViewController.m */; };
+		89FCD8D818185C6E006F86EE /* IKMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8D418185C6E006F86EE /* IKMyViewController.m */; };
+		89FCD8DC18185C99006F86EE /* IKConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8DB18185C99006F86EE /* IKConnectionViewController.m */; };
+		89FCD8DE18185DBA006F86EE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FCD8DD18185DBA006F86EE /* GameKit.framework */; };
+		89FCD8E118185E10006F86EE /* IKConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E018185E10006F86EE /* IKConnectionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +81,34 @@
 		89F73736180D0E4500AF297C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		89F73738180D0E4500AF297C /* IKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKViewController.h; sourceTree = "<group>"; };
 		89F73739180D0E4500AF297C /* IKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKViewController.m; sourceTree = "<group>"; };
+		89FCD8A9181857F5006F86EE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		89FCD8AA181857F5006F86EE /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		89FCD8AD18185817006F86EE /* connect_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connect_off.png; sourceTree = "<group>"; };
+		89FCD8AE18185818006F86EE /* connect_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect_off@2x.png"; sourceTree = "<group>"; };
+		89FCD8AF18185818006F86EE /* connect_on-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect_on-tap.png"; sourceTree = "<group>"; };
+		89FCD8B018185818006F86EE /* connect_on-tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect_on-tap@2x.png"; sourceTree = "<group>"; };
+		89FCD8B118185818006F86EE /* connect_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect_on@2x.png"; sourceTree = "<group>"; };
+		89FCD8B71818583A006F86EE /* basicinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basicinfo.png; sourceTree = "<group>"; };
+		89FCD8B81818583A006F86EE /* basicinfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basicinfo@2x.png"; sourceTree = "<group>"; };
+		89FCD8B91818583A006F86EE /* basicinfotop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basicinfotop.png; sourceTree = "<group>"; };
+		89FCD8BA1818583A006F86EE /* basicinfotop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basicinfotop@2x.png"; sourceTree = "<group>"; };
+		89FCD8BF18185864006F86EE /* tabbase_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbase_off.png; sourceTree = "<group>"; };
+		89FCD8C018185864006F86EE /* tabbase_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbase_off@2x.png"; sourceTree = "<group>"; };
+		89FCD8C118185864006F86EE /* tabbase_on_his.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbase_on_his.png; sourceTree = "<group>"; };
+		89FCD8C218185864006F86EE /* tabbase_on_his@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbase_on_his@2x.png"; sourceTree = "<group>"; };
+		89FCD8C318185864006F86EE /* tabbase_on_pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbase_on_pro.png; sourceTree = "<group>"; };
+		89FCD8C418185864006F86EE /* tabbase_on_pro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbase_on_pro@2x.png"; sourceTree = "<group>"; };
+		89FCD8CE18185BFB006F86EE /* IKAbstractTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKAbstractTabViewController.h; sourceTree = "<group>"; };
+		89FCD8CF18185BFB006F86EE /* IKAbstractTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKAbstractTabViewController.m; sourceTree = "<group>"; };
+		89FCD8D118185C6E006F86EE /* IKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKHomeViewController.h; sourceTree = "<group>"; };
+		89FCD8D218185C6E006F86EE /* IKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKHomeViewController.m; sourceTree = "<group>"; };
+		89FCD8D318185C6E006F86EE /* IKMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKMyViewController.h; sourceTree = "<group>"; };
+		89FCD8D418185C6E006F86EE /* IKMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKMyViewController.m; sourceTree = "<group>"; };
+		89FCD8DA18185C99006F86EE /* IKConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKConnectionViewController.h; sourceTree = "<group>"; };
+		89FCD8DB18185C99006F86EE /* IKConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKConnectionViewController.m; sourceTree = "<group>"; };
+		89FCD8DD18185DBA006F86EE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		89FCD8DF18185E10006F86EE /* IKConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKConnectionManager.h; sourceTree = "<group>"; };
+		89FCD8E018185E10006F86EE /* IKConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKConnectionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89FCD8DE18185DBA006F86EE /* GameKit.framework in Frameworks */,
 				89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */,
 				89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */,
 				89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +130,8 @@
 		893A22F4180ED0DF001B889D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				89FCD8DF18185E10006F86EE /* IKConnectionManager.h */,
+				89FCD8E018185E10006F86EE /* IKConnectionManager.m */,
 				893A22EB180DA4BC001B889D /* IKHTTPClient.h */,
 				893A22EC180DA4BC001B889D /* IKHTTPClient.m */,
 				893A22EE180DA58F001B889D /* IKServerAdaptor.h */,
@@ -118,6 +172,7 @@
 		89F7371C180D0E4400AF297C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89FCD8DD18185DBA006F86EE /* GameKit.framework */,
 				89F7371D180D0E4400AF297C /* UIKit.framework */,
 				89F7371F180D0E4400AF297C /* Foundation.framework */,
 				89F73721180D0E4400AF297C /* CoreGraphics.framework */,
@@ -129,16 +184,13 @@
 		89F73723180D0E4400AF297C /* Qigaroo */ = {
 			isa = PBXGroup;
 			children = (
+				89FCD8CB18185872006F86EE /* images */,
 				893A22F5180ED786001B889D /* WUTextSuggestion */,
 				89F7372C180D0E4500AF297C /* IKAppDelegate.h */,
 				89F7372D180D0E4500AF297C /* IKAppDelegate.m */,
 				89F73735180D0E4500AF297C /* MainStoryboard.storyboard */,
-				89F73738180D0E4500AF297C /* IKViewController.h */,
-				89F73739180D0E4500AF297C /* IKViewController.m */,
-				893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */,
-				893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */,
-				893A22D1180D1E24001B889D /* IKInputTextViewController.h */,
-				893A22D2180D1E24001B889D /* IKInputTextViewController.m */,
+				89FCD8CD18185BBA006F86EE /* Controller */,
+				89FCD8CC18185BA3006F86EE /* View */,
 				89F73724180D0E4500AF297C /* Supporting Files */,
 				893A22F4180ED0DF001B889D /* Network */,
 			);
@@ -157,6 +209,58 @@
 				89F73733180D0E4500AF297C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89FCD8CB18185872006F86EE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				89FCD8BF18185864006F86EE /* tabbase_off.png */,
+				89FCD8C018185864006F86EE /* tabbase_off@2x.png */,
+				89FCD8C118185864006F86EE /* tabbase_on_his.png */,
+				89FCD8C218185864006F86EE /* tabbase_on_his@2x.png */,
+				89FCD8C318185864006F86EE /* tabbase_on_pro.png */,
+				89FCD8C418185864006F86EE /* tabbase_on_pro@2x.png */,
+				89FCD8B71818583A006F86EE /* basicinfo.png */,
+				89FCD8B81818583A006F86EE /* basicinfo@2x.png */,
+				89FCD8B91818583A006F86EE /* basicinfotop.png */,
+				89FCD8BA1818583A006F86EE /* basicinfotop@2x.png */,
+				89FCD8AD18185817006F86EE /* connect_off.png */,
+				89FCD8AE18185818006F86EE /* connect_off@2x.png */,
+				89FCD8AF18185818006F86EE /* connect_on-tap.png */,
+				89FCD8B018185818006F86EE /* connect_on-tap@2x.png */,
+				89FCD8B118185818006F86EE /* connect_on@2x.png */,
+				89FCD8A9181857F5006F86EE /* background.png */,
+				89FCD8AA181857F5006F86EE /* background@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		89FCD8CC18185BA3006F86EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */,
+				893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		89FCD8CD18185BBA006F86EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FCD8DA18185C99006F86EE /* IKConnectionViewController.h */,
+				89FCD8DB18185C99006F86EE /* IKConnectionViewController.m */,
+				89FCD8D118185C6E006F86EE /* IKHomeViewController.h */,
+				89FCD8D218185C6E006F86EE /* IKHomeViewController.m */,
+				89FCD8D318185C6E006F86EE /* IKMyViewController.h */,
+				89FCD8D418185C6E006F86EE /* IKMyViewController.m */,
+				89FCD8CE18185BFB006F86EE /* IKAbstractTabViewController.h */,
+				89FCD8CF18185BFB006F86EE /* IKAbstractTabViewController.m */,
+				89F73738180D0E4500AF297C /* IKViewController.h */,
+				89F73739180D0E4500AF297C /* IKViewController.m */,
+				893A22D1180D1E24001B889D /* IKInputTextViewController.h */,
+				893A22D2180D1E24001B889D /* IKInputTextViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +322,23 @@
 				89F73732180D0E4500AF297C /* Default@2x.png in Resources */,
 				89F73734180D0E4500AF297C /* Default-568h@2x.png in Resources */,
 				89F73737180D0E4500AF297C /* MainStoryboard.storyboard in Resources */,
+				89FCD8AB181857F5006F86EE /* background.png in Resources */,
+				89FCD8AC181857F5006F86EE /* background@2x.png in Resources */,
+				89FCD8B218185818006F86EE /* connect_off.png in Resources */,
+				89FCD8B318185818006F86EE /* connect_off@2x.png in Resources */,
+				89FCD8B418185818006F86EE /* connect_on-tap.png in Resources */,
+				89FCD8B518185818006F86EE /* connect_on-tap@2x.png in Resources */,
+				89FCD8B618185818006F86EE /* connect_on@2x.png in Resources */,
+				89FCD8BB1818583A006F86EE /* basicinfo.png in Resources */,
+				89FCD8BC1818583A006F86EE /* basicinfo@2x.png in Resources */,
+				89FCD8BD1818583A006F86EE /* basicinfotop.png in Resources */,
+				89FCD8BE1818583A006F86EE /* basicinfotop@2x.png in Resources */,
+				89FCD8C518185864006F86EE /* tabbase_off.png in Resources */,
+				89FCD8C618185864006F86EE /* tabbase_off@2x.png in Resources */,
+				89FCD8C718185864006F86EE /* tabbase_on_his.png in Resources */,
+				89FCD8C818185864006F86EE /* tabbase_on_his@2x.png in Resources */,
+				89FCD8C918185864006F86EE /* tabbase_on_pro.png in Resources */,
+				89FCD8CA18185864006F86EE /* tabbase_on_pro@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +391,11 @@
 				893A22F0180DA590001B889D /* IKServerAdaptor.m in Sources */,
 				893A22FA180ED786001B889D /* WUTextSuggestionController.m in Sources */,
 				893A22FB180ED786001B889D /* WUTextSuggestionDisplayController.m in Sources */,
+				89FCD8D018185BFB006F86EE /* IKAbstractTabViewController.m in Sources */,
+				89FCD8D718185C6E006F86EE /* IKHomeViewController.m in Sources */,
+				89FCD8D818185C6E006F86EE /* IKMyViewController.m in Sources */,
+				89FCD8DC18185C99006F86EE /* IKConnectionViewController.m in Sources */,
+				89FCD8E118185E10006F86EE /* IKConnectionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
