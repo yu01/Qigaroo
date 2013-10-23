@@ -60,9 +60,29 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="vqx-qb-UAP">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-G0-w41">
+                                    <items>
+                                        <navigationItem title="新規登録" id="NvV-XC-3xQ">
+                                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nfV-Om-8qn"/>
+                                            <barButtonItem key="rightBarButtonItem" title="Item" style="plain" systemItem="done" id="WHG-yV-dPD"/>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="XPp-G0-w41" firstAttribute="leading" secondItem="vqx-qb-UAP" secondAttribute="leading" type="default" id="FzC-3n-Qxu"/>
+                                <constraint firstItem="XPp-G0-w41" firstAttribute="top" secondItem="vqx-qb-UAP" secondAttribute="top" type="default" id="omd-Xv-TXw"/>
+                                <constraint firstItem="XPp-G0-w41" firstAttribute="trailing" secondItem="vqx-qb-UAP" secondAttribute="trailing" type="default" id="stK-uS-5P0"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputCell" id="Axh-2f-VDl" customClass="IKInputTextViewCell">
-                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -88,7 +108,7 @@
                                                 <action selector="pushAddBtn:" destination="iQF-e7-Fkf" eventType="touchUpInside" id="XIc-LA-aoz"/>
                                             </connections>
                                         </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCG-9u-p0l">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCG-9u-p0l">
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="188" id="6gY-db-uFz"/>

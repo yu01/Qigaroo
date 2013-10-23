@@ -32,6 +32,7 @@
     self.tableView.allowsSelection = NO;
     
     self->cellCount = [[NSMutableArray alloc] initWithObjects:@"1", @"2",nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,10 +54,16 @@
     // Return the number of rows in the section.
     return section == 0 ? 4 : [self->cellCount count]+1;
 }
+
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return section == 0 ? @"基本情報" : @"オプション";
 }
+
+//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return section == 0 ? 30 : 65;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
