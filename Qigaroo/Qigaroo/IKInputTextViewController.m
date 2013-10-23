@@ -45,13 +45,17 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self->cellCount count]+1;
+    return section == 0 ? 4 : [self->cellCount count]+1;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return section == 0 ? @"基本情報" : @"オプション";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,13 +69,17 @@
     cell.inputTextView.hidden = NO;
     cell.addBtn.hidden = YES;
     
-    
     cell.inputTextView.delegate = self;
     
     if (indexPath.row >= [self->cellCount count]) {
         cell.inputTextField.hidden = YES;
         cell.inputTextView.hidden = YES;
         cell.addBtn.hidden = NO;
+    }
+    if (indexPath.section == 0) {
+        cell.addBtn.hidden = YES;
+        cell.inputTextField.hidden = NO;
+        cell.inputTextView.hidden = NO;
     }
     
     WUTextSuggestionDisplayController *suggestionDisplayController = [[WUTextSuggestionDisplayController alloc] init];
@@ -157,6 +165,10 @@
 }
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
     self->inputStr = [textView.text mutableCopy];
     [self->inputStr replaceCharactersInRange:range withString:text];
     NSLog(@"入力：%@",self->inputStr);
