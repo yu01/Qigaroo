@@ -176,6 +176,8 @@
 }
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
+    // TODO: どのセルか検出してその内容を保存する
+    
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         return NO;
