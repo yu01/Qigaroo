@@ -612,60 +612,6 @@
         <image name="tabbase_on_his.png" width="320" height="60"/>
         <image name="tabbase_on_pro.png" width="320" height="60"/>
     </resources>
-    <classes>
-        <class className="IKAbstractTabViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKAbstractTabViewController.h"/>
-        </class>
-        <class className="IKConnectionViewController" superclassName="IKAbstractTabViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKConnectionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="HomeBtn:"/>
-                <relationship kind="action" name="MyBtn:"/>
-                <relationship kind="action" name="TagrooBtn:"/>
-                <relationship kind="outlet" name="TagrooBtnImage" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tabbarView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="IKHomeViewController" superclassName="IKAbstractTabViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKHomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="HomeBtn:"/>
-                <relationship kind="action" name="MyBtn:"/>
-                <relationship kind="action" name="TagrooBtn:"/>
-                <relationship kind="outlet" name="TagrooBtnImage" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="IKInputTextViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKInputTextViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="inputTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="IKInputTextViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKInputTextViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushAddBtn:"/>
-                <relationship kind="action" name="pushCancelBtn:"/>
-            </relationships>
-        </class>
-        <class className="IKMyViewController" superclassName="IKAbstractTabViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKMyViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="HomeBtn:"/>
-                <relationship kind="action" name="MyBtn:"/>
-                <relationship kind="action" name="TagrooBtn:"/>
-                <relationship kind="outlet" name="TagrooBtnImage" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="IKViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
