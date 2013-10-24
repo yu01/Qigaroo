@@ -14,5 +14,6 @@
     NSMutableString *inputStr;
 }
 - (IBAction)pushAddBtn:(id)sender;
+- (IBAction)pushCancelBtn:(id)sender;
 
 @end

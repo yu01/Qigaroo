@@ -160,6 +160,10 @@
     [self.tableView reloadData];
 }
 
+- (IBAction)pushCancelBtn:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 //-------------- textView
 -(BOOL)textViewShouldBeginEditing:(UITextView*)textView
 {

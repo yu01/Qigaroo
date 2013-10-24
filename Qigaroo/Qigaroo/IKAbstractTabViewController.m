@@ -48,8 +48,10 @@
 
 - (void)tabHome
 {
-    IKHomeViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IKHomeViewController"];
-    [self presentViewController:viewController animated:NO completion:nil];
+    UINavigationController *naviController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeNavi"];
+    [self presentViewController:naviController animated:NO completion:nil];
+//    IKHomeViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IKHomeViewController"];
+//    [self presentViewController:viewController animated:NO completion:nil];
 }
 
 - (void)tabTagroo
@@ -60,8 +62,10 @@
 
 - (void)tabMy
 {
-    IKMyViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IKMyViewController"];
-    [self presentViewController:viewController animated:NO completion:nil];
+    UINavigationController *naviController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyNavi"];
+    [self presentViewController:naviController animated:NO completion:nil];
+//    IKMyViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IKMyViewController"];
+//    [self presentViewController:viewController animated:NO completion:nil];
 }
 
 
