@@ -103,9 +103,12 @@ static WUTextSuggestionDisplayController __weak *_activeTextSuggestionDisplayCon
         if (self.suggesting && self.textView) {
             NSMutableArray *meunItems = [NSMutableArray array];
             [suggestionItems enumerateObjectsUsingBlock:^(WUTextSuggestionDisplayItem *obj, NSUInteger idx, BOOL *stop) {
-                UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:obj.title action:WUTextSuggestionDisplayControllerUIMenuControllerActionSelectorForMenuItemWithTitle(obj.title)];
-                item.textSuggestionDisplayItem = obj;
-                [meunItems addObject:item];
+                if (![obj.title isEqualToString:self.textView.text]) {
+                    
+                    UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:obj.title action:WUTextSuggestionDisplayControllerUIMenuControllerActionSelectorForMenuItemWithTitle(obj.title)];
+                    item.textSuggestionDisplayItem = obj;
+                    [meunItems addObject:item];
+                }
             }];
             if (meunItems.count) {
                 CGRect caretRect = [self.textView caretRectForPosition:self.textView.selectedTextRange.start];
@@ -136,13 +139,20 @@ static WUTextSuggestionDisplayController __weak *_activeTextSuggestionDisplayCon
     } else {
         NSRange suggestionRange = self.suggestionRange;
         NSString *suggestionString = item.title;
-        NSString *insertString = [suggestionString stringByAppendingString:@" "];
+        NSString *insertString = [suggestionString stringByAppendingString:@"^^^"];
         if (self.textView.text.length > suggestionRange.location + suggestionRange.length) {
-            if ([[self.textView.text substringWithRange:NSMakeRange(suggestionRange.location, suggestionRange.length + 1)] hasSuffix:@" "]) {
+            if ([[self.textView.text substringWithRange:NSMakeRange(suggestionRange.location, suggestionRange.length + 1)] hasSuffix:@"^^^"]) {
                 insertString = suggestionString;
             }
         }
-        self.textView.text = [self.textView.text stringByReplacingCharactersInRange:suggestionRange withString:insertString];
+        NSString *deleteInputStr = [self.textView.text stringByReplacingCharactersInRange:suggestionRange withString:insertString];
+        NSRange searchResult = [deleteInputStr rangeOfString:@"^^^"];
+        if(searchResult.location == NSNotFound){
+            
+        }else{
+            self.textView.text = [deleteInputStr substringToIndex:searchResult.location];
+        }
+        
     }
 }
 

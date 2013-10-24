@@ -48,6 +48,8 @@
 		89FCD8DC18185C99006F86EE /* IKConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8DB18185C99006F86EE /* IKConnectionViewController.m */; };
 		89FCD8DE18185DBA006F86EE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FCD8DD18185DBA006F86EE /* GameKit.framework */; };
 		89FCD8E118185E10006F86EE /* IKConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E018185E10006F86EE /* IKConnectionManager.m */; };
+		89FCD8E518197981006F86EE /* IKProfEditTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E418197981006F86EE /* IKProfEditTextViewController.m */; };
+		89FCD8E818197AD6006F86EE /* IKProfEditTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E718197AD6006F86EE /* IKProfEditTextViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +111,10 @@
 		89FCD8DD18185DBA006F86EE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		89FCD8DF18185E10006F86EE /* IKConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKConnectionManager.h; sourceTree = "<group>"; };
 		89FCD8E018185E10006F86EE /* IKConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKConnectionManager.m; sourceTree = "<group>"; };
+		89FCD8E318197981006F86EE /* IKProfEditTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKProfEditTextViewController.h; sourceTree = "<group>"; };
+		89FCD8E418197981006F86EE /* IKProfEditTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKProfEditTextViewController.m; sourceTree = "<group>"; };
+		89FCD8E618197AD6006F86EE /* IKProfEditTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKProfEditTextViewCell.h; sourceTree = "<group>"; };
+		89FCD8E718197AD6006F86EE /* IKProfEditTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKProfEditTextViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,8 @@
 			children = (
 				893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */,
 				893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */,
+				89FCD8E618197AD6006F86EE /* IKProfEditTextViewCell.h */,
+				89FCD8E718197AD6006F86EE /* IKProfEditTextViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -259,6 +267,8 @@
 				89F73739180D0E4500AF297C /* IKViewController.m */,
 				893A22D1180D1E24001B889D /* IKInputTextViewController.h */,
 				893A22D2180D1E24001B889D /* IKInputTextViewController.m */,
+				89FCD8E318197981006F86EE /* IKProfEditTextViewController.h */,
+				89FCD8E418197981006F86EE /* IKProfEditTextViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -396,6 +406,8 @@
 				89FCD8D818185C6E006F86EE /* IKMyViewController.m in Sources */,
 				89FCD8DC18185C99006F86EE /* IKConnectionViewController.m in Sources */,
 				89FCD8E118185E10006F86EE /* IKConnectionManager.m in Sources */,
+				89FCD8E518197981006F86EE /* IKProfEditTextViewController.m in Sources */,
+				89FCD8E818197AD6006F86EE /* IKProfEditTextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

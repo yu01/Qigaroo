@@ -192,49 +192,49 @@
 
 
 //-------------- TextField
--(BOOL)textFieldShouldBeginEditing:(UITextField*)textField{
-    // TODO: Viewを上にずらす
-    int y = [[textField superview] superview].frame.origin.y;
-    NSLog(@"y:%d",y);
-    NSLog(@"self.view:%@",self.tableView);
-//    if (y > 150) {
-//        [UIView animateWithDuration:0.3
-//                         animations:^{
-//                             int height = 80;
-//                             self.tableView.frame = CGRectMake(0, -height, self.tableView.frame.size.width, self.tableView.frame.size.height);
-//                         }];
-//    }
-    
-    return YES;
-}
--(BOOL)textFieldShouldReturn:(UITextField*)textField{
-    [textField resignFirstResponder];
-    
-    // TODO: Viewがずれているなら戻す
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         self.tableView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height);
-                     }];
-    
-    return YES;
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    self->inputStr = [textField.text mutableCopy];
-    [self->inputStr replaceCharactersInRange:range withString:string];
-    NSLog(@"入力：%@",self->inputStr);
-    [[IKServerAdaptor sharedManager] getCategories:self->inputStr success:^(NSArray *words){
-        NSLog(@"候補: %@",words);
-    }];
-    
-    return YES;
-}
-
--(BOOL)textFieldShouldClear:(UITextField*)textField{
-    [self->inputStr setString:@""];
-    return YES;
-}
+//-(BOOL)textFieldShouldBeginEditing:(UITextField*)textField{
+//    // TODO: Viewを上にずらす
+//    int y = [[textField superview] superview].frame.origin.y;
+//    NSLog(@"y:%d",y);
+//    NSLog(@"self.view:%@",self.tableView);
+////    if (y > 150) {
+////        [UIView animateWithDuration:0.3
+////                         animations:^{
+////                             int height = 80;
+////                             self.tableView.frame = CGRectMake(0, -height, self.tableView.frame.size.width, self.tableView.frame.size.height);
+////                         }];
+////    }
+//    
+//    return YES;
+//}
+//-(BOOL)textFieldShouldReturn:(UITextField*)textField{
+//    [textField resignFirstResponder];
+//    
+//    // TODO: Viewがずれているなら戻す
+//    [UIView animateWithDuration:0.3
+//                     animations:^{
+//                         self.tableView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height);
+//                     }];
+//    
+//    return YES;
+//}
+//
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//{
+//    self->inputStr = [textField.text mutableCopy];
+//    [self->inputStr replaceCharactersInRange:range withString:string];
+//    NSLog(@"入力：%@",self->inputStr);
+//    [[IKServerAdaptor sharedManager] getCategories:self->inputStr success:^(NSArray *words){
+//        NSLog(@"候補: %@",words);
+//    }];
+//    
+//    return YES;
+//}
+//
+//-(BOOL)textFieldShouldClear:(UITextField*)textField{
+//    [self->inputStr setString:@""];
+//    return YES;
+//}
 
 #pragma mark - WUTextSuggestionDisplayControllerDataSource
 - (NSArray *)textSuggestionDisplayController:(WUTextSuggestionDisplayController *)textSuggestionDisplayController suggestionDisplayItemsForSuggestionType:(WUTextSuggestionType)suggestionType query:(NSString *)suggestionQuery
