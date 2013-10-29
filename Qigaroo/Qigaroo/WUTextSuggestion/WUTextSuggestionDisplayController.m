@@ -151,6 +151,7 @@ static WUTextSuggestionDisplayController __weak *_activeTextSuggestionDisplayCon
             
         }else{
             self.textView.text = [deleteInputStr substringToIndex:searchResult.location];
+            LOG(@"STag:%d, テキスト:%@",self.textView.tag,self.textView.text);
         }
         
     }

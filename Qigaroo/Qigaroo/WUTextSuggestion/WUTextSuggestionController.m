@@ -107,18 +107,17 @@ NSString * const WUTextSuggestionControllerTextInputTextPropertyKey = @"text";
     __block NSString *word = self.textView.text;
     __block NSRange range = NSMakeRange(0, word.length);
     
-    
     if (word.length >= 1 && range.location != NSNotFound) {
         NSString *rest = [word substringFromIndex:0];
-            self.suggesting = YES;
-            self.suggestionRange = NSMakeRange(range.location , range.length - 1);
-            if (self.shouldReloadSuggestionsBlock) {
-                self.shouldReloadSuggestionsBlock(WUTextSuggestionTypeAt,rest,self.suggestionRange);
-            }
-        } else {
-            self.suggestionRange = NSMakeRange(NSNotFound, 0);
-            self.suggesting = NO;
+        self.suggesting = YES;
+        self.suggestionRange = NSMakeRange(range.location , range.length - 1);
+        if (self.shouldReloadSuggestionsBlock) {
+            self.shouldReloadSuggestionsBlock(WUTextSuggestionTypeAt,rest,self.suggestionRange);
         }
+    } else {
+        self.suggestionRange = NSMakeRange(NSNotFound, 0);
+        self.suggesting = NO;
+    }
 }
 
 @end
