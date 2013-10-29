@@ -77,6 +77,7 @@
     cell.addBtn.hidden = YES;
     
     cell.inputTextView.delegate = self;
+    cell.inputTextView.tag = 2;
     
     if (indexPath.row >= [self->cellCount count]) {
         cell.inputTextField.hidden = YES;
@@ -84,6 +85,7 @@
         cell.addBtn.hidden = NO;
     }
     if (indexPath.section == 0) {
+        cell.inputTextView.tag = 0;
         cell.addBtn.hidden = YES;
         cell.inputTextField.hidden = NO;
         cell.inputTextView.hidden = NO;
@@ -177,6 +179,8 @@
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     // TODO: どのセルか検出してその内容を保存する
+    // tag付けしたものが取れるか試してみる
+    NSLog(@"Tag:%d",textView.tag);
     
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
