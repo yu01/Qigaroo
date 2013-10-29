@@ -67,37 +67,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"InputCell";
-    IKInputTextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.inputTextField.delegate = self;
-    cell.inputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    //    [cell.inputTextField addTarget:self action:@selector(hoge:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    cell.inputTextField.hidden = NO;
-    cell.inputTextView.hidden = NO;
-    cell.addBtn.hidden = YES;
-    
-    cell.inputTextView.delegate = self;
-    cell.inputTextView.tag = 2;
-    
-    if (indexPath.row >= [self->cellCount count]) {
-        cell.inputTextField.hidden = YES;
-        cell.inputTextView.hidden = YES;
-        cell.addBtn.hidden = NO;
+    IKInputTextViewCell *cell;
+    if ((indexPath.row >= [self->cellCount count]) && indexPath.section != 0) {
+        NSString *CellIdentifier = @"addCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    }else{
+        NSString *CellIdentifier = @"InputCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
+        cell.inputTextView.delegate = self;
+        if ( indexPath.section == 0) {
+            cell.inputTextView.tag = indexPath.row;
+        }else{
+            cell.inputTextView.tag = 100 + indexPath.row;
+        }
+        
+        
+        WUTextSuggestionDisplayController *suggestionDisplayController = [[WUTextSuggestionDisplayController alloc] init];
+        suggestionDisplayController.dataSource = self;
+        
+        WUTextSuggestionController *suggestionController = [[WUTextSuggestionController alloc] initWithTextView:cell.inputTextView suggestionDisplayController:suggestionDisplayController];
+        
+        suggestionController.suggestionType = WUTextSuggestionTypeAt | WUTextSuggestionTypeHashTag;
     }
-    if (indexPath.section == 0) {
-        cell.inputTextView.tag = 0;
-        cell.addBtn.hidden = YES;
-        cell.inputTextField.hidden = NO;
-        cell.inputTextView.hidden = NO;
-    }
-    
-    WUTextSuggestionDisplayController *suggestionDisplayController = [[WUTextSuggestionDisplayController alloc] init];
-    suggestionDisplayController.dataSource = self;
-    
-    WUTextSuggestionController *suggestionController = [[WUTextSuggestionController alloc] initWithTextView:cell.inputTextView suggestionDisplayController:suggestionDisplayController];
-    
-    suggestionController.suggestionType = WUTextSuggestionTypeAt | WUTextSuggestionTypeHashTag;
-    
     
     return cell;
 }

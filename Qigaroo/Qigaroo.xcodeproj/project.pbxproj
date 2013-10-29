@@ -49,7 +49,7 @@
 		89FCD8DE18185DBA006F86EE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89FCD8DD18185DBA006F86EE /* GameKit.framework */; };
 		89FCD8E118185E10006F86EE /* IKConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E018185E10006F86EE /* IKConnectionManager.m */; };
 		89FCD8E518197981006F86EE /* IKProfEditTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E418197981006F86EE /* IKProfEditTextViewController.m */; };
-		89FCD8E818197AD6006F86EE /* IKProfEditTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E718197AD6006F86EE /* IKProfEditTextViewCell.m */; };
+		89FCD8E818197AD6006F86EE /* IKFooterTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FCD8E718197AD6006F86EE /* IKFooterTextViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,8 +113,8 @@
 		89FCD8E018185E10006F86EE /* IKConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKConnectionManager.m; sourceTree = "<group>"; };
 		89FCD8E318197981006F86EE /* IKProfEditTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKProfEditTextViewController.h; sourceTree = "<group>"; };
 		89FCD8E418197981006F86EE /* IKProfEditTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKProfEditTextViewController.m; sourceTree = "<group>"; };
-		89FCD8E618197AD6006F86EE /* IKProfEditTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKProfEditTextViewCell.h; sourceTree = "<group>"; };
-		89FCD8E718197AD6006F86EE /* IKProfEditTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKProfEditTextViewCell.m; sourceTree = "<group>"; };
+		89FCD8E618197AD6006F86EE /* IKFooterTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKFooterTextViewCell.h; sourceTree = "<group>"; };
+		89FCD8E718197AD6006F86EE /* IKFooterTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKFooterTextViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,8 +246,8 @@
 			children = (
 				893A22CE180D1DFA001B889D /* IKInputTextViewCell.h */,
 				893A22CF180D1DFA001B889D /* IKInputTextViewCell.m */,
-				89FCD8E618197AD6006F86EE /* IKProfEditTextViewCell.h */,
-				89FCD8E718197AD6006F86EE /* IKProfEditTextViewCell.m */,
+				89FCD8E618197AD6006F86EE /* IKFooterTextViewCell.h */,
+				89FCD8E718197AD6006F86EE /* IKFooterTextViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -407,7 +407,7 @@
 				89FCD8DC18185C99006F86EE /* IKConnectionViewController.m in Sources */,
 				89FCD8E118185E10006F86EE /* IKConnectionManager.m in Sources */,
 				89FCD8E518197981006F86EE /* IKProfEditTextViewController.m in Sources */,
-				89FCD8E818197AD6006F86EE /* IKProfEditTextViewCell.m in Sources */,
+				89FCD8E818197AD6006F86EE /* IKFooterTextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

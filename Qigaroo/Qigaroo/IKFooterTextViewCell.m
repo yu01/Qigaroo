@@ -1,14 +1,14 @@
 //
-//  IKProfEditTextViewCell.m
+//  IKFooterTextViewCell.m
 //  Qigaroo
 //
 //  Created by 閑野 伊織 on 13/10/25.
 //  Copyright (c) 2013年 IPLAB-Kanno. All rights reserved.
 //
 
-#import "IKProfEditTextViewCell.h"
+#import "IKFooterTextViewCell.h"
 
-@implementation IKProfEditTextViewCell
+@implementation IKFooterTextViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {

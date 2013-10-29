@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface IKInputTextViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIButton *addBtn;
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
 @property (strong, nonatomic) IBOutlet UITextView *inputTextView;
 
