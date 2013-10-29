@@ -22,7 +22,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="iQF-e7-Fkf" kind="modal" id="68q-Kd-Oze"/>
+                                    <segue destination="sVu-U6-n7a" kind="modal" id="sP4-Vj-sZ1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNd-u1-WzB">
@@ -52,41 +52,17 @@
             </objects>
             <point key="canvasLocation" x="286" y="-10"/>
         </scene>
-        <!--Input Text View Controller-->
+        <!--Input Text View Controller - 新規登録-->
         <scene sceneID="duB-B2-Jcn">
             <objects>
                 <tableViewController id="iQF-e7-Fkf" customClass="IKInputTextViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mW1-CJ-eJB">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="vqx-qb-UAP">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-G0-w41">
-                                    <items>
-                                        <navigationItem title="新規登録" id="NvV-XC-3xQ">
-                                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nfV-Om-8qn">
-                                                <connections>
-                                                    <action selector="pushCancelBtn:" destination="iQF-e7-Fkf" id="N0e-95-hm4"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem key="rightBarButtonItem" title="Item" style="plain" systemItem="done" id="WHG-yV-dPD"/>
-                                        </navigationItem>
-                                    </items>
-                                </navigationBar>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="XPp-G0-w41" firstAttribute="leading" secondItem="vqx-qb-UAP" secondAttribute="leading" type="default" id="FzC-3n-Qxu"/>
-                                <constraint firstItem="XPp-G0-w41" firstAttribute="top" secondItem="vqx-qb-UAP" secondAttribute="top" type="default" id="omd-Xv-TXw"/>
-                                <constraint firstItem="XPp-G0-w41" firstAttribute="trailing" secondItem="vqx-qb-UAP" secondAttribute="trailing" type="default" id="stK-uS-5P0"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputCell" id="Axh-2f-VDl" customClass="IKInputTextViewCell">
-                                <rect key="frame" x="0.0" y="80" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="46" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -127,9 +103,9 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="0DP-wi-kz3" firstAttribute="leading" secondItem="KAE-2v-5za" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="02V-jB-ElR"/>
-                                    <constraint firstItem="KAE-2v-5za" firstAttribute="bottom" secondItem="0DP-wi-kz3" secondAttribute="bottom" type="default" id="RhE-GK-Khu"/>
+                                    <constraint firstItem="KAE-2v-5za" firstAttribute="centerY" secondItem="hCG-9u-p0l" secondAttribute="centerY" type="default" id="Czc-wP-UBs"/>
+                                    <constraint firstItem="0DP-wi-kz3" firstAttribute="top" secondItem="KAE-2v-5za" secondAttribute="top" type="default" id="RSs-fb-BZC"/>
                                     <constraint firstItem="hCG-9u-p0l" firstAttribute="leading" secondItem="Axh-2f-VDl" secondAttribute="leading" constant="111" id="Y6p-Lf-q9X"/>
-                                    <constraint firstItem="hCG-9u-p0l" firstAttribute="centerY" secondItem="0DP-wi-kz3" secondAttribute="centerY" type="default" id="YtV-Fo-Z4z"/>
                                     <constraint firstItem="KAE-2v-5za" firstAttribute="baseline" secondItem="0DP-wi-kz3" secondAttribute="baseline" type="default" id="dS2-Uo-00d"/>
                                     <constraint firstItem="hCG-9u-p0l" firstAttribute="centerY" secondItem="Axh-2f-VDl" secondAttribute="centerY" type="default" id="f47-iF-yRJ"/>
                                     <constraint firstItem="KAE-2v-5za" firstAttribute="leading" secondItem="Axh-2f-VDl" secondAttribute="leading" constant="22" id="iuL-lN-Rre"/>
@@ -140,7 +116,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="addCell" id="dMK-nz-nHj" customClass="IKFooterTextViewCell">
-                                <rect key="frame" x="0.0" y="125" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="91" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -176,11 +152,67 @@
                             <outlet property="delegate" destination="iQF-e7-Fkf" id="KcO-6y-3ZM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Eb3-np-BtN"/>
+                    <navigationItem key="navigationItem" title="新規登録" id="Eb3-np-BtN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nfV-Om-8qn">
+                            <connections>
+                                <action selector="pushCancelBtn:" destination="iQF-e7-Fkf" id="N0e-95-hm4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" systemItem="done" id="WHG-yV-dPD">
+                            <connections>
+                                <segue destination="fxP-si-qrL" kind="push" id="ChT-oF-sNJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKo-lb-FIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704" y="-10"/>
+            <point key="canvasLocation" x="1106" y="-10"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="U4r-Ua-CQ7">
+            <objects>
+                <tableViewController id="fxP-si-qrL" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7Kt-94-XuS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dZ5-LK-FqO">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fxP-si-qrL" id="QTb-Ap-yCC"/>
+                            <outlet property="delegate" destination="fxP-si-qrL" id="0D3-eG-E4V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ovo-I6-MJO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQz-Yk-3Pc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514" y="-10"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k5Q-vj-dLz">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="sVu-U6-n7a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ud1-vW-Y2Y">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iQF-e7-Fkf" kind="relationship" relationship="rootViewController" id="VIp-X9-8mL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAA-iB-jCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="-10"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uwu-z8-Fhc">
@@ -737,6 +769,65 @@
         <image name="tabbase_on_his.png" width="320" height="60"/>
         <image name="tabbase_on_pro.png" width="320" height="60"/>
     </resources>
+    <classes>
+        <class className="IKAbstractTabViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKAbstractTabViewController.h"/>
+        </class>
+        <class className="IKConnectionViewController" superclassName="IKAbstractTabViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKConnectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="HomeBtn:"/>
+                <relationship kind="action" name="MyBtn:"/>
+                <relationship kind="action" name="TagrooBtn:"/>
+                <relationship kind="outlet" name="TagrooBtnImage" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tabbarView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="IKFooterTextViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKFooterTextViewCell.h"/>
+        </class>
+        <class className="IKHomeViewController" superclassName="IKAbstractTabViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKHomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="HomeBtn:"/>
+                <relationship kind="action" name="MyBtn:"/>
+                <relationship kind="action" name="TagrooBtn:"/>
+                <relationship kind="outlet" name="TagrooBtnImage" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="IKInputTextViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKInputTextViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="inputTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="IKInputTextViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKInputTextViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushAddBtn:"/>
+                <relationship kind="action" name="pushCancelBtn:"/>
+            </relationships>
+        </class>
+        <class className="IKMyViewController" superclassName="IKAbstractTabViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKMyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="HomeBtn:"/>
+                <relationship kind="action" name="MyBtn:"/>
+                <relationship kind="action" name="TagrooBtn:"/>
+                <relationship kind="outlet" name="TagrooBtnImage" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="IKProfEditTextViewController" superclassName="IKInputTextViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKProfEditTextViewController.h"/>
+        </class>
+        <class className="IKViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IKViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
