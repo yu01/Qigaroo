@@ -48,15 +48,15 @@
 {
     void (^_completionBlock)(NSArray*) = [completionBlock copy];
     NSString *path = [NSString stringWithFormat:@"v1/api/user/new"];
-    NSLog(@"get %@",path);
+    LOG(@"get %@",path);
     [self.client getPath:path
               parameters:@{@"access_token": accessToken}
                  success:^(AFHTTPRequestOperation *operation, id responseObject){
-                     NSLog(@"success");
+                     LOG(@"success");
                      _completionBlock(responseObject);
                  }
                  failure:^(AFHTTPRequestOperation *operation, NSError *error){
-                     NSLog(@"error:%@",error);
+                     LOG(@"error:%@",error);
                      [[NSNotificationCenter defaultCenter] postNotificationName:@"FailureReport" object:nil];
                  }];
 }
@@ -65,15 +65,15 @@
 {
     void (^_completionBlock)(NSArray*) = [completionBlock copy];
     NSString *path = [NSString stringWithFormat:@"v1/api/user/token"];
-    NSLog(@"get %@",path);
+    LOG(@"get %@",path);
     [self.client getPath:path
               parameters:@{@"access_token": accessToken}
                  success:^(AFHTTPRequestOperation *operation, id responseObject){
-                     NSLog(@"success");
+                     LOG(@"success");
                      _completionBlock(responseObject[@"user_token"]);
                  }
                  failure:^(AFHTTPRequestOperation *operation, NSError *error){
-                     NSLog(@"error:%@",error);
+                     LOG(@"error:%@",error);
                      [[NSNotificationCenter defaultCenter] postNotificationName:@"FailureReport" object:nil];
                  }];
 }

@@ -62,15 +62,15 @@
 {
     switch (state) {
         case GKPeerStateAvailable:
-            NSLog(@"%@", @"Peer state changed - available");
+            LOG(@"%@", @"Peer state changed - available");
             break;
             
         case GKPeerStateConnecting:
-            NSLog(@"%@", @"Peer state changed - connecting");
+            LOG(@"%@", @"Peer state changed - connecting");
             break;
             
         case GKPeerStateConnected:
-            NSLog(@"%@", @"Peer state changed - connected");
+            LOG(@"%@", @"Peer state changed - connected");
             [self sendDataToAllPeers:[[NSString stringWithFormat:@"sendToken"] dataUsingEncoding:NSUTF8StringEncoding]];
             // 接続完了を通知
             self.isConnecting = YES;
@@ -78,7 +78,7 @@
             break;
             
         case GKPeerStateDisconnected:
-            NSLog(@"%@", @"Peer state changed - disconnected");
+            LOG(@"%@", @"Peer state changed - disconnected");
             // 切断を通知
             currentSession = nil;
             self.isConnecting = NO;
@@ -86,7 +86,7 @@
             break;
             
         case GKPeerStateUnavailable:
-            NSLog(@"%@", @"Peer state changed - unavailable");
+            LOG(@"%@", @"Peer state changed - unavailable");
             break;
             
         default:
@@ -135,7 +135,7 @@
 - (void)sendDataToAllPeers:(NSData *)data
 {
 
-    NSLog(@"送信するよー！%@",data);
+    LOG(@"送信するよー！%@",data);
     
     if (currentSession)
     {
@@ -146,7 +146,7 @@
                                      error:&error];
         if (error)
         {
-            NSLog(@"%@", [error localizedDescription]);
+            LOG(@"%@", [error localizedDescription]);
         }
     }
 }
@@ -158,7 +158,7 @@
  //[NSKeyedUnarchiver unarchiveObjectWithData:data];
  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
  [defaults setObject:fidData forKey:@"other_fid"];
- NSLog(@"通信成功！ data:%@",fidData);
+ LOG(@"通信成功！ data:%@",fidData);
  }*/
 
 @end

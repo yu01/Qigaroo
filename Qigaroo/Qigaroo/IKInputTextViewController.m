@@ -172,7 +172,7 @@
 {
     // TODO: どのセルか検出してその内容を保存する
     // tag付けしたものが取れるか試してみる
-    NSLog(@"Tag:%d",textView.tag);
+    LOG(@"Tag:%d",textView.tag);
     
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
@@ -180,59 +180,14 @@
     }
     self->inputStr = [textView.text mutableCopy];
     [self->inputStr replaceCharactersInRange:range withString:text];
-    NSLog(@"入力：%@",self->inputStr);
+    LOG(@"入力：%@",self->inputStr);
     [[IKServerAdaptor sharedManager] getCategories:self->inputStr success:^(NSArray *words){
-        NSLog(@"候補: %@",words);
+        LOG(@"候補: %@",words);
         self->suggestArr = [[NSMutableArray alloc] initWithArray:words];
     }];
     return YES;
 }
 
-
-//-------------- TextField
-//-(BOOL)textFieldShouldBeginEditing:(UITextField*)textField{
-//    // TODO: Viewを上にずらす
-//    int y = [[textField superview] superview].frame.origin.y;
-//    NSLog(@"y:%d",y);
-//    NSLog(@"self.view:%@",self.tableView);
-////    if (y > 150) {
-////        [UIView animateWithDuration:0.3
-////                         animations:^{
-////                             int height = 80;
-////                             self.tableView.frame = CGRectMake(0, -height, self.tableView.frame.size.width, self.tableView.frame.size.height);
-////                         }];
-////    }
-//    
-//    return YES;
-//}
-//-(BOOL)textFieldShouldReturn:(UITextField*)textField{
-//    [textField resignFirstResponder];
-//    
-//    // TODO: Viewがずれているなら戻す
-//    [UIView animateWithDuration:0.3
-//                     animations:^{
-//                         self.tableView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height);
-//                     }];
-//    
-//    return YES;
-//}
-//
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-//{
-//    self->inputStr = [textField.text mutableCopy];
-//    [self->inputStr replaceCharactersInRange:range withString:string];
-//    NSLog(@"入力：%@",self->inputStr);
-//    [[IKServerAdaptor sharedManager] getCategories:self->inputStr success:^(NSArray *words){
-//        NSLog(@"候補: %@",words);
-//    }];
-//    
-//    return YES;
-//}
-//
-//-(BOOL)textFieldShouldClear:(UITextField*)textField{
-//    [self->inputStr setString:@""];
-//    return YES;
-//}
 
 #pragma mark - WUTextSuggestionDisplayControllerDataSource
 - (NSArray *)textSuggestionDisplayController:(WUTextSuggestionDisplayController *)textSuggestionDisplayController suggestionDisplayItemsForSuggestionType:(WUTextSuggestionType)suggestionType query:(NSString *)suggestionQuery
@@ -262,7 +217,7 @@
 }
 
 - (NSArray *)names {
-    NSLog(@"SuggestArray: %@",self->suggestArr);
+    LOG(@"SuggestArray: %@",self->suggestArr);
     return self->suggestArr;
     
 //    return @[@"あああ",@"あやや",@"Abigail",@"Ada",@"Adela",@"Adelaide",@"Afra",@"Agatha",@"Agnes",@"Alberta",@"Alexia",@"Alice",@"Alma",@"Althea",@"Alva",@"Amanda",@"Amelia",@"Amy",@"Anastasia",@"Andrea",@"Angela",@"Ann",@"Anna",@"Annabelle",@"Antonia",@"April",@"Arabela",@"Arlene",@"Astrid",@"Atalanta",@"Athena",@"Audrey",@"Aurora",@"Barbara",@"Beatrice",@"Belinda",@"Bella",@"Belle",@"Bernice",@"Bertha",@"Beryl",@"Bess",@"Betsy",@"Betty",@"Beulah",@"Beverly",@"Blanche",@"Bblythe",@"Bonnie",@"Breenda",@"Bridget",@"Brook",@"Camille",@"Candance",@"Candice",@"Cara",@"Carol",@"Caroline",@"Catherine",@"Cathy",@"Cecilia",@"Celeste",@"Charlotte",@"Cherry",@"Cheryl",@"Chloe",@"Christine",@"Claire",@"Clara",@"Clementine",@"Constance",@"Cora",@"Coral",@"Cornelia",@"Crystal",@"Cynthia",@"Daisy",@"Dale",@"Dana",@"Daphne",@"Darlene",@"Dawn",@"Debby",@"Deborah",@"Deirdre",@"Delia",@"Denise",@"Diana",@"Dinah",@"Dolores",@"Dominic",@"Donna",@"Dora",@"Doreen",@"Doris",@"Dorothy",@"Eartha",@"Eden",@"Edith",@"Edwina",@"Eileen",@"Elaine",@"Eleanore",@"Elizabeth",@"Ella",@"Ellen",@"Elma",@"Elsa",@"Elsie",@"Elva",@"Elvira",@"Emily",@"Emma",@"Enid",@"Erica",@"Erin",@"Esther",@"Ethel",@"Eudora",@"Eunice",@"Evangeline",@"Eve",@"Evelyn",@"Faithe",@"Fanny",@"Fay",@"Flora",@"Florence",@"Frances",@"Freda",@"Frederica",@"Gabrielle",@"Gail",@"Gemma",@"Genevieve",@"Georgia",@"Geraldine",@"Gill",@"Giselle",@"Gladys",@"Gloria",@"Grace",@"Griselda",@"Gustave",@"Gwendolyn",@"Hannah",@"Harriet",@"Hazel",@"Heather",@"Hedda",@"Hedy",@"Helen",@"Heloise",@"Hermosa",@"Hilda",@"Hilary",@"Honey",@"Hulda",@"Ida",@"Ina",@"Ingrid",@"Irene",@"Iris",@"Irma",@"Isabel",@"Ivy",@"Jacqueline",@"Jamie",@"Jane",@"Janet",@"Janice",@"Jean",@"Jennifer",@"Jenny",@"Jessie",@"Jessica",@"Jill",@"Jo",@"Joa",@"Joanna",@"Joanne",@"Jocelyn",@"Jodie",@"Josephine",@"Joy",@"Joyce",@"Judith",@"Judy",@"Julia",@"Julie",@"Juliet",@"June",@"Kama",@"Karen",@"Katherine",@"Kay",@"Kelly",@"Kimberley",@"Kitty",@"Kristin",@"Laura",@"Laurel",@"Lauren",@"Lee",@"Leila",@"Lena",@"Leona",@"Lesley",@"Letitia",@"Lilith",@"Lillian",@"Linda",@"Lindsay",@"Lisa",@"Liz",@"Lorraine",@"Louise",@"Lucy",@"Lydia",@"Lynn",@"Mabel",@"Madeline",@"Madge",@"Maggie",@"Mamie",@"Mandy",@"Marcia",@"Margaret",@"Marguerite",@"Maria",@"Marian",@"Marina",@"Marjorie",@"Martha",@"Martina",@"Mary",@"Maud",@"Maureen",@"Mavis",@"Maxine",@"Mag",@"May",@"Megan",@"Melissa",@"Meroy",@"Meredith",@"Merry",@"Michelle",@"Michaelia",@"Mignon",@"Mildred",@"Mirabelle",@"Miranda",@"Miriam",@"Modesty",@"Moira",@"Molly",@"Mona",@"Monica",@"Muriel",@"Murray",@"Myra",@"Myrna",@"Nancy",@"Naomi",@"Natalie",@"Natividad",@"Nelly",@"Nicola",@"Nicole",@"Nina",@"Nora",@"Norma",@"Novia",@"Nydia",@"Octavia",@"Odelette",@"Odelia",@"Olga",@"Olive",@"Olivia",@"Ophelia",@"Pag",@"Page",@"Pamela",@"Pandora",@"Patricia",@"Paula",@"Pearl",@"Penelope",@"Penny",@"Philipppa",@"Phoebe",@"Phoenix",@"Phyllis",@"Polly",@"Poppy",@"Prima",@"Priscilla",@"Prudence",@"Queena",@"Quintina",@"Rachel",@"Rae",@"Rebecca",@"Regina",@"Renata",@"Renee",@"Rita",@"Riva",@"Roberta",@"Rosalind",@"Rose",@"Rosemary",@"Roxanne",@"Ruby",@"Ruth",@"Sabina",@"Sally",@"Sabrina",@"Salome",@"Samantha",@"Sandra",@"Sandy",@"Sara",@"Sarah",@"Sebastiane",@"Selena",@"Sharon",@"Sheila",@"Sherry",@"Shirley",@"Sibyl",@"Sigrid",@"Simona",@"Sophia",@"Spring",@"Stacey",@"Setlla",@"Stephanie",@"Susan",@"Susanna",@"Susie",@"Suzanne",@"Sylvia",@"Tabitha",@"Tammy",@"Teresa",@"Tess",@"Thera",@"Theresa",@"Tiffany",@"Tina",@"Tobey",@"Tracy",@"Trista",@"Truda",@"Ula",@"Una",@"Ursula",@"Valentina",@"Valerie",@"Vanessa",@"Venus",@"Vera",@"Verna",@"Veromca",@"Veronica",@"Victoria",@"Vicky",@"Viola",@"Violet",@"Virginia",@"Vita",@"Vivien",@"Wallis",@"Wanda",@"Wendy",@"Winifred",@"Winni",@"Xanthe",@"Xaviera",@"Xenia",@"Yedda",@"Yetta",@"Yvette",@"Yvonne",@"Zara",@"Zenobia",@"Zoe",@"Zona",@"Zora"];

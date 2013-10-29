@@ -34,7 +34,7 @@
 	// Do any additional setup after loading the view.
 
     dispatch_once(&onceToken, ^{
-        //NSLog(@"一度だけ呼ばれると思ってたけど画面遷移すると必ず一度呼ばれるらしい");
+        //LOG(@"一度だけ呼ばれると思ってたけど画面遷移すると必ず一度呼ばれるらしい");
         connectionManager = [[IKConnectionManager alloc] init];
     });
 }

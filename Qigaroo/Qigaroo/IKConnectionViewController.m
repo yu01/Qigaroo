@@ -65,7 +65,7 @@
 //// 画面に指を一本以上タッチしたときに実行されるメソッド
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 //{
-//    NSLog(@"touches count : %d (touchesBegan:withEvent:)", [touches count]);
+//    LOG(@"touches count : %d (touchesBegan:withEvent:)", [touches count]);
 //    CGPoint p = [[touches anyObject] locationInView:self.view];
 //    biginPoint = CGPointMake(p.x, p.y);
 //}
@@ -73,13 +73,13 @@
 //// 画面に触れている指が一本以上移動したときに実行されるメソッド
 //- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 //{
-//    NSLog(@"touches count : %d (touchesMoved:withEvent:)", [touches count]);
+//    LOG(@"touches count : %d (touchesMoved:withEvent:)", [touches count]);
 //    // 1.anyObjectメソッドでいずれか1つのタッチを取得
 //    // 2.locationViewメソッドで対象となるビューのタッチした座標を取得
 //    CGPoint p = [[touches anyObject] locationInView:self.view];
 //    int x = p.x;    // X座標
 //    int y = p.y;    // Y座標
-//    NSLog(@"(%d,%d)",x,y);
+//    LOG(@"(%d,%d)",x,y);
 //    if (biginPoint.y > y) {
 //        
 //    }
@@ -99,13 +99,13 @@
 //// 指を一本以上画面から離したときに実行されるメソッド
 //- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 //{
-//    NSLog(@"touches count : %d (touchesEnded:withEvent:)", [touches count]);
+//    LOG(@"touches count : %d (touchesEnded:withEvent:)", [touches count]);
 //}
 //
 //// システムイベントがタッチイベントをキャンセルしたときに実行されるメソッド
 //- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 //{
-//    NSLog(@"touches count : %d (touchesCancelled:withEvent:)", [touches count]);
+//    LOG(@"touches count : %d (touchesCancelled:withEvent:)", [touches count]);
 //}
 
 
@@ -123,7 +123,7 @@
 {
     // 他のピアから受信したデータをデコード
 //    NSString *sendToken = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//    NSLog(@"sendToken:%@",sendToken);
+//    LOG(@"sendToken:%@",sendToken);
 //    
 //    if([@"sendToken" isEqualToString:sendToken]) {
 //        [UIView animateWithDuration:0.3f
