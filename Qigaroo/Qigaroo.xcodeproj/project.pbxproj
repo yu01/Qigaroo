@@ -14,6 +14,7 @@
 		893A22F0180DA590001B889D /* IKServerAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22EF180DA590001B889D /* IKServerAdaptor.m */; };
 		893A22FA180ED786001B889D /* WUTextSuggestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22F7180ED786001B889D /* WUTextSuggestionController.m */; };
 		893A22FB180ED786001B889D /* WUTextSuggestionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A22F9180ED786001B889D /* WUTextSuggestionDisplayController.m */; };
+		8970186F1820551600FFF31C /* IKRegisterCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8970186E1820551600FFF31C /* IKRegisterCheckViewController.m */; };
 		89F7371E180D0E4400AF297C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371D180D0E4400AF297C /* UIKit.framework */; };
 		89F73720180D0E4400AF297C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7371F180D0E4400AF297C /* Foundation.framework */; };
 		89F73722180D0E4400AF297C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F73721180D0E4400AF297C /* CoreGraphics.framework */; };
@@ -67,6 +68,8 @@
 		893A22F7180ED786001B889D /* WUTextSuggestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUTextSuggestionController.m; sourceTree = "<group>"; };
 		893A22F8180ED786001B889D /* WUTextSuggestionDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUTextSuggestionDisplayController.h; sourceTree = "<group>"; };
 		893A22F9180ED786001B889D /* WUTextSuggestionDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUTextSuggestionDisplayController.m; sourceTree = "<group>"; };
+		8970186D1820551600FFF31C /* IKRegisterCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKRegisterCheckViewController.h; sourceTree = "<group>"; };
+		8970186E1820551600FFF31C /* IKRegisterCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKRegisterCheckViewController.m; sourceTree = "<group>"; };
 		89F7371A180D0E4400AF297C /* Qigaroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qigaroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F7371D180D0E4400AF297C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89F7371F180D0E4400AF297C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -269,6 +272,8 @@
 				893A22D2180D1E24001B889D /* IKInputTextViewController.m */,
 				89FCD8E318197981006F86EE /* IKProfEditTextViewController.h */,
 				89FCD8E418197981006F86EE /* IKProfEditTextViewController.m */,
+				8970186D1820551600FFF31C /* IKRegisterCheckViewController.h */,
+				8970186E1820551600FFF31C /* IKRegisterCheckViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				89FCD8E118185E10006F86EE /* IKConnectionManager.m in Sources */,
 				89FCD8E518197981006F86EE /* IKProfEditTextViewController.m in Sources */,
 				89FCD8E818197AD6006F86EE /* IKFooterTextViewCell.m in Sources */,
+				8970186F1820551600FFF31C /* IKRegisterCheckViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

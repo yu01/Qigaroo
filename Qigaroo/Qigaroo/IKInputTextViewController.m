@@ -10,9 +10,10 @@
 #import "IKServerAdaptor.h"
 #import "WUTextSuggestionController.h"
 #import "WUTextSuggestionDisplayController.h"
+#import "IKRegisterCheckViewController.h"
 
 @interface IKInputTextViewController ()<WUTextSuggestionDisplayControllerDataSource>
-
+@property NSUserDefaults *defaults;
 @end
 
 @implementation IKInputTextViewController
@@ -31,7 +32,12 @@
     [super viewDidLoad];
     self.tableView.allowsSelection = NO;
     
-    self->cellCount = [[NSMutableArray alloc] initWithObjects:@"1", @"2",nil];
+    self.defaults = [NSUserDefaults standardUserDefaults];
+    if ([self.defaults objectForKey:@""]) {
+        
+    }else{
+        self->cellAnswer = [[NSMutableArray alloc] initWithObjects:@"0",nil];
+    }
     
 }
 
@@ -50,7 +56,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return section == 0 ? 4 : [self->cellCount count]+1;
+    return section == 0 ? 4 : [self->cellAnswer count]+1;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -67,7 +73,7 @@
 {
     IKInputTextViewCell *cell;
     
-    if ((indexPath.row >= [self->cellCount count]) && indexPath.section != 0) {
+    if ((indexPath.row >= [self->cellAnswer count]) && indexPath.section != 0) {
         NSString *CellIdentifier = @"addCell";
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     }else{
@@ -78,7 +84,7 @@
         if ( indexPath.section == 0) {
             cell.inputTextView.tag = indexPath.row;
         }else{
-            cell.inputTextView.tag = 100 + indexPath.row;
+            cell.inputTextView.tag = 100 + indexPath.row;   // 基本情報が100を越えることはないので+100で識別する
         }
         
         
@@ -149,13 +155,24 @@
     [super viewDidUnload];
 }
 - (IBAction)pushAddBtn:(id)sender {
-    [self->cellCount addObject:[NSString stringWithFormat:@"%d",[self->cellCount count]]];
+    [self->cellAnswer addObject:[NSString stringWithFormat:@"%d",[self->cellAnswer count]]];
     [self.tableView reloadData];
 }
 
 - (IBAction)pushCancelBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    LOG(@"segue identfier: %@", segue.identifier);
+    
+    if([segue.identifier isEqualToString:@"pushToRegister"]) {
+        IKRegisterCheckViewController *rc = (IKRegisterCheckViewController *)[segue destinationViewController];
+        rc.cellAnswer = self->cellAnswer;
+    }
+}
+
 
 #pragma mark - textView
 -(BOOL)textViewShouldBeginEditing:(UITextView*)textView
@@ -169,10 +186,6 @@
 }
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
-    // TODO: どのセルか検出してその内容を保存する
-    // tag付けしたものが取れるか試してみる
-    LOG_PRINTF(@"Tag:%d",textView.tag);
-    
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         return NO;
@@ -184,6 +197,12 @@
         LOG_PRINTF(@"候補: %@",words);
         self->suggestArr = [[NSMutableArray alloc] initWithArray:words];
     }];
+    
+    LOG_PRINTF(@"Tag:%d",textView.tag);
+    if (textView.tag >= 100) {
+        [self->cellAnswer replaceObjectAtIndex:textView.tag - 100 withObject:self->inputStr];
+    }
+    
     return YES;
 }
 
